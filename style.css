@@ -124,32 +124,36 @@ header {
     padding-top: 5px;
 }
 
-
 @media screen and (max-width: 768px) {
     /* Estilos para telas menores que 768px */
+    .background {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .imagemesquerda {
+        margin: 20px;
+        width: 80%; /* Ajuste a largura conforme necessário */
+    }
+
     .texto, .botoes {
-      position: static; /* Remove o posicionamento absoluto */
-      width: auto; /* Define a largura automática para ocupar o espaço disponível */
-      transform: none; /* Remove a transformação */
-      margin-right: 20px; /* Adicione um espaçamento à direita para separar do conteúdo vizinho */
-      margin-left: 20px; /* Adicione um espaçamento à esquerda para separar do conteúdo vizinho */
+        position: static;
+        width: auto;
+        transform: none;
+        margin: 20px;
+        padding: 15px;
+        font-size: 18px;
     }
-    
-    .texto {
-      padding: 15px; /* Reduza o preenchimento para se ajustar à tela menor */
-      font-size: 18px; /* Reduza o tamanho da fonte para melhor legibilidade em telas menores */
-    }
-    
+
     .botoes {
-      padding: 15px; /* Reduza o preenchimento para se ajustar à tela menor */
-      font-size: 18px; /* Reduza o tamanho da fonte para melhor legibilidade em telas menores */
-      flex-direction: column; /* Empilhe verticalmente os botões em telas menores */
-      align-items: center; /* Centralize os botões verticalmente */
+        flex-direction: column; /* Alinha os botões verticalmente */
+        align-items: center; /* Centraliza os botões horizontalmente */
+        padding-bottom: 0; /* Remove o espaçamento inferior */
     }
-    
+
     .botao {
-      width: 100%; /* Defina a largura como 100% para ocupar todo o espaço disponível */
-      margin-bottom: 10px; /* Adicione um espaçamento entre os botões */
+        width: 100%;
+        margin-bottom: 10px;
     }
-  }
-  
+}
