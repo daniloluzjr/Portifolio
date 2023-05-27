@@ -109,51 +109,62 @@ header {
     background-color: rgba(19, 6, 78, 0.9); /* Define a nova cor de fundo ao passar o mouse */
 }
 
-.footer {
-    display: flex;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    height: 100px; /* Ajuste a altura conforme desejado */
-    background-color:  rgba(19, 6, 78, 0.9); /* Ajuste a cor de fundo conforme desejado */
+footer {
+	text-align: center;
+	background-color: rgb(15, 15, 59);
+	padding: 40px 0;
 }
 
-.footer img {
-    width: 68px; /* Ajuste a largura conforme desejado */
-    height: 68px; /* Ajuste a altura conforme desejado */
-    opacity: 0.6;
-    padding-top: 5px;
+.img-footer {
+	opacity: 0.5;
+    width: 120px;
 }
+
+.copyright {
+	color: rgb(52, 52, 134);
+	font-size: 13px;
+	margin: 20px 0 0;
+    font-family: sans-serif;
+}
+
+
+
 
 @media screen and (max-width: 768px) {
     /* Estilos para telas menores que 768px */
-    .background {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-    }
+.background {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
 
-    .imagemesquerda {
-        margin: 20px;
-        width: 80%; /* Ajuste a largura conforme necessário */
-    }
+.imagemesquerda {
+    margin: 20px;
+    width: 80%; /* Ajuste a largura conforme necessário */
+}
 
-    .texto, .botoes {
-        position: static;
-        width: auto;
-        transform: none;
-        margin: 20px;
-        padding: 15px;
-        font-size: 18px;
-    }
+.texto, .botoes {
+    position: static;
+    width: auto;
+    transform: none;
+    margin: 20px;
+    padding: 15px;
+    font-size: 18px;
+}
 
-    .botoes {
-        flex-direction: column; /* Alinha os botões verticalmente */
-        align-items: center; /* Centraliza os botões horizontalmente */
-        padding-bottom: 0; /* Remove o espaçamento inferior */
-    }
+.botoes {
+    flex-direction: column; /* Alinha os botões verticalmente */
+    align-items: center; /* Centraliza os botões horizontalmente */
+    padding-bottom: 0; /* Remove o espaçamento inferior */
+}
 
-    .botao {
-        width: 100%;
-        margin-bottom: 10px;
-    }
+.botao {
+    width: 100%;
+    margin-bottom: 10px;
+}
+    
+.img-footer {
+    opacity: 0.5;
+    width: 90px;
+}
 }
