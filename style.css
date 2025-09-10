@@ -6,7 +6,7 @@
     --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     --dark-bg: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
-    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-bg: rgba(255, 255, 255, 0.02);
     --text-primary: #ffffff;
     --text-secondary: #b8c5d6;
     --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -190,8 +190,8 @@ header {
 
 .content {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
     width: 100%;
     background: var(--card-bg);
     backdrop-filter: blur(15px);
@@ -225,12 +225,13 @@ header {
     background: var(--card-bg);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 2.5rem;
+    padding: 2rem;
     border-radius: var(--border-radius);
     color: var(--text-primary);
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.6;
     text-align: justify;
+    max-width: 90%;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
     position: relative;
