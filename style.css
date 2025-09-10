@@ -6,7 +6,7 @@
     --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     --dark-bg: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
-    --card-bg: rgba(255, 255, 255, 0.1);
+    --card-bg: rgba(255, 255, 255, 0.05);
     --text-primary: #ffffff;
     --text-secondary: #b8c5d6;
     --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -29,14 +29,15 @@ body {
 }
 
 header {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
     z-index: 1000;
     transition: var(--transition);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
 .right-icons {
@@ -67,7 +68,7 @@ header {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: var(--accent-gradient);
+    background: var(--primary-gradient);
     transition: var(--transition);
     z-index: -1;
 }
@@ -94,8 +95,8 @@ header {
 }
 
 .background {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
     min-height: calc(100vh - 80px);
     padding: 3rem;
@@ -128,8 +129,8 @@ header {
 
 /* Carousel Styles */
 .carousel-container {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   overflow: hidden;
   border-radius: 20px;
   border: 4px solid var(--accent-color);
@@ -137,24 +138,27 @@ header {
   position: relative;
   z-index: 2;
   justify-self: center;
+  display: flex;
+  align-items: center;
 }
 
 .carousel-track {
   display: flex;
   flex-direction: column;
   animation: verticalCarousel 20s infinite linear;
+  align-items: center;
 }
 
 .carousel-image {
   width: 100%;
-  height: 300px;
+  height: 400px;
   object-fit: cover;
   flex-shrink: 0;
 }
 
 @keyframes verticalCarousel {
     0% { transform: translateY(0); }
-    100% { transform: translateY(-3000px); }
+    100% { transform: translateY(-4000px); }
 }
 
 .carousel-container:hover .carousel-track {
@@ -167,27 +171,86 @@ header {
   transition: all 0.3s ease;
 }
 
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.8rem;
+  text-align: center;
+  width: 100%;
+}
+
+.carousel-caption p {
+  margin: 0;
+  font-weight: 500;
+  color: white;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    width: 100%;
+    background: var(--card-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--primary-gradient);
+}
 
 .content-section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    width: 100%;
 }
 
 .texto {
     background: var(--card-bg);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 2.5rem;
     border-radius: var(--border-radius);
     color: var(--text-primary);
     font-size: 1.1rem;
     line-height: 1.8;
     text-align: justify;
-    box-shadow: var(--shadow-soft);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+}
+
+.imagemesquerda {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    margin-bottom: 1.5rem;
+}
+
+.imagemesquerda:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-hover);
 }
 
 .texto::before {
@@ -227,7 +290,7 @@ header {
     min-width: 160px;
     transition: var(--transition);
     overflow: hidden;
-    box-shadow: var(--shadow-soft);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .botao::before {
@@ -258,16 +321,18 @@ header {
 
 footer {
     text-align: center;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     padding: 3rem 0;
     margin-top: 2rem;
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .img-footer {
     opacity: 0.7;
-    width: 120px;
+    width: 80px;
+    height: auto;
     transition: var(--transition);
     filter: brightness(1.2);
 }
