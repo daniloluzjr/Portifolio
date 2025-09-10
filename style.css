@@ -97,7 +97,7 @@ header {
 .background {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
     min-height: calc(100vh - 80px);
     padding: 3rem;
     position: relative;
@@ -190,7 +190,7 @@ header {
 
 .content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 0.8fr;
     gap: 2rem;
     width: 100%;
     background: var(--card-bg);
@@ -232,6 +232,7 @@ header {
     line-height: 1.6;
     text-align: justify;
     max-width: 90%;
+
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
     position: relative;
