@@ -1,99 +1,218 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
+:root {
+    /* Modern Color Palette */
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --dark-bg: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --text-primary: #ffffff;
+    --text-secondary: #b8c5d6;
+    --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.4);
+    --border-radius: 16px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(15, 15, 59);
+    background: var(--dark-bg);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
 header {
-    background-color: rgb(15, 15, 59);
-    align-items: right;
-    justify-content: flex-end;
-    margin-right: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: var(--transition);
 }
 
 .header-icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(15, 15, 59);
-    margin: 0;
-    padding: 10px;
+}
+
+.right-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.left-icons a,
+.right-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    margin: 0 0.5rem;
+}
+
+.left-icons a::before,
+.right-icons a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--accent-gradient);
+    transition: var(--transition);
+    z-index: -1;
+}
+
+.left-icons a:hover::before,
+.right-icons a:hover::before {
+    left: 0;
 }
 
 .header-icons img {
-    width: 40px;
-    height: 40px;
-    margin: 0 10px;
-    transition: transform 0.5s ease-in-out;
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+    transition: var(--transition);
+    z-index: 1;
 }
 
-.header-icons img:hover {
-    transform: scale(1.45);
+.left-icons a:hover,
+.right-icons a:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.left-icons a:hover img,
+.right-icons a:hover img {
+    transform: scale(1.1);
 }
 
 
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .background {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    min-height: calc(100vh - 120px);
+    padding: 3rem;
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-soft);
     position: relative;
-    width: 100vw;
-    height: 85vh;
+    overflow: hidden;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: url("/assets/FundoPortifolio.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8); 
+    opacity: 0.1;
+    z-index: -1;
 }
 
 .imagemesquerda {
-    align-self: center;
-    margin-right: 50px;
-    margin-left: 50px;
-    width: 752px; /* Ajuste a largura conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    object-fit: cover;
+}
+
+.imagemesquerda:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-hover);
 }
 
 .texto {
-    position: absolute;
-    top: 40%;
-    right: -2%;
-    transform: translate(-30%, -40%);
-    background-color: rgba(31, 9, 126, 0.7);
-    padding: 30px;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    padding: 2.5rem;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    line-height: 1.8;
     text-align: justify;
-    border-radius: 10px;
-    width: 780px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Adiciona uma sombra ao texto */
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+}
+
+.texto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent-gradient);
+    border-radius: 2px;
 }
 
 footer {
-	text-align: center;
-	background-color: rgb(15, 15, 59);
-	padding: 40px 0;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem 2rem;
+    margin-top: 3rem;
 }
 
 .img-footer {
-	opacity: 0.5;
     width: 120px;
+    opacity: 0.7;
+    transition: var(--transition);
+    filter: brightness(1.2);
+}
+
+.img-footer:hover {
+    opacity: 1;
+    transform: scale(1.05);
 }
 
 .copyright {
-	color: rgb(52, 52, 134);
-	font-size: 13px;
-	margin: 20px 0 0;
-    font-family: sans-serif;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 1.5rem 0 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
 }
 
 
