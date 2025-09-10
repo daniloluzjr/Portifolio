@@ -197,7 +197,7 @@ header {
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: var(--border-radius);
-    padding: 2rem;
+    padding: 3.5rem 2rem;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     align-items: center;
     position: relative;
@@ -225,7 +225,7 @@ header {
     background: var(--card-bg);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 2rem;
+    padding: 3rem;
     border-radius: var(--border-radius);
     color: var(--text-primary);
     font-size: 1rem;
@@ -247,7 +247,8 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: var(--shadow-soft);
     transition: var(--transition);
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
 }
 
 .imagemesquerda:hover {
