@@ -22,10 +22,29 @@
 body {
     margin: 0;
     padding: 0;
-    background: var(--dark-bg);
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+        url("/assets/FundoPortifolio.png"),
+        var(--dark-bg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
 }
 
 header {
