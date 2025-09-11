@@ -224,9 +224,9 @@ header {
 }
 
 .texto {
-    background: var(--card-bg);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 3rem;
     border-radius: var(--border-radius);
     color: var(--text-primary);
@@ -234,8 +234,9 @@ header {
     line-height: 1.6;
     text-align: justify;
     max-width: 90%;
-
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
     transition: var(--transition);
     position: relative;
     overflow: hidden;
