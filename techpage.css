@@ -166,7 +166,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.01);
     backdrop-filter: blur(20px);
     padding: 2.5rem;
     font-family: 'Inter', sans-serif;
@@ -193,6 +193,11 @@ header {
     height: 100%;
     background: var(--accent-gradient);
     border-radius: 2px;
+}
+
+.texto:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
 }
 
 footer {
