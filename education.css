@@ -39,6 +39,7 @@ header {
     z-index: 1000;
     transition: var(--transition);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    margin: 1rem;
 }
 
 .header-icons {
