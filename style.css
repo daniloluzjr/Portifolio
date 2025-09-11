@@ -29,9 +29,10 @@ body {
 }
 
 header {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--border-radius);
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
