@@ -50,9 +50,16 @@
         </div>
 
       </div>
-      <div class="texto">
-        <p>Hi, I'm Dan. I hold a Master's degree in Physical Education with a Postgraduate specialization in Biomechanics of Physical Activity and Health. I earned my Bachelor's degree at YMCA Brazil and have extensive experience teaching in both schools and higher education institutions. In addition, I am a qualified Nurse Technician and Surgical Nurse, with professional experience in hospitals and nursing homes across Brazil, Ireland, and Portugal. These roles have provided me with a deep understanding and sensitivity when working in healthcare and caregiving environments. I also hold a degree in Systems Analysis and am currently developing a healthcare application designed to improve communication and record-keeping within the sector. Please explore the sections above to learn more about my experience and skills:</p>
-        </div>
+      <div class="texto timeline-wrapper">
+        <figure class="timeline-figure" id="timelineFigure" aria-label="Career timeline: click to expand" tabindex="0">
+          <div class="timeline-image-container">
+            <img src="assets/graphic.png" alt="Career Timeline (2005–2026)" class="timeline-img animate-kenburns" />
+            <div class="image-shine"></div>
+          </div>
+          </figure>
+        <p>Hi, I'm Dan. I hold a Master’s degree in Physical Education and a Postgraduate Diploma in Biomechanics. I’m also a qualified Nurse Technician and Surgical Nurse with experience in hospitals and care homes across Brazil, Ireland, and Portugal. Alongside my work in the healthcare field, I’m currently developing digital projects through <a href="https://luxsolutions.tech" target="_blank" rel="noopener" class="link-plain">LuxSolutions.tech</a>, focused on innovation and technology for health and care services. The chart above outlines my professional journey, while the sections below provide more details about each area: IT &amp; Development, Nursing, and Education.</p>
+        <!-- Modal removido desta div para evitar ser limitado por overflow/transform -->
+      </div>
       </div>
       
       <div class="content-section">
@@ -70,7 +77,17 @@
       <p class="copyright">&copy; Produced by Danilo Luz Jr. - 2023</p>
 
 		</footer>
-
+    <!-- Modal colocado ao nível do body para centralização plena na viewport -->
+    <div class="timeline-modal" id="timelineModal" aria-hidden="true" role="dialog" aria-label="Expanded timeline">
+      <div class="timeline-modal-content" role="document">
+        <button class="timeline-modal-close" id="timelineClose" aria-label="Close">×</button>
+        <div class="timeline-image-container large">
+          <img src="assets/graphic.png" alt="Career Timeline (2005–2026)" class="timeline-img" />
+          <div class="image-shine"></div>
+        </div>
+      </div>
+    </div>
+    <script src="/timeline.js"></script>
 </body>
 
 </html>
