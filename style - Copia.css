@@ -37,7 +37,7 @@ header {
     position: relative;
     width: 100vw;
     height: 85vh;
-    background-image: url("/assets/FundoPortifolio.png");
+background-image: url("assets/FundoPortifolio.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
