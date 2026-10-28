@@ -227,6 +227,12 @@ header.site-header {
   text-decoration: underline;
 }
 
+.resume-btn-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.2rem;
+}
+
 .resume-btn {
   display: inline-flex;
   align-items: center;
