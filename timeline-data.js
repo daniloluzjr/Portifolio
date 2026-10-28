@@ -8,7 +8,7 @@ const TIMELINE_DATA = {
     maxYear: 2026.5,
     viewBoxWidth: 1240,
     viewBoxHeight: 560,
-    marginLeft: 150,
+    marginLeft: 140,
     marginRight: 60
   },
   categories: {
@@ -16,25 +16,24 @@ const TIMELINE_DATA = {
       id: 'healthcare',
       label: 'Healthcare',
       color: '#2d8a4e',
-      colorHover: '#38b765',
-      y: 130
+      colorHover: '#3ec971',
+      y: 140
     },
     education: {
       id: 'education',
       label: 'Education',
       color: '#2b78c6',
-      colorHover: '#4597ea',
-      y: 270
+      colorHover: '#4da3ff',
+      y: 280
     },
     it: {
       id: 'it',
       label: 'IT',
       color: '#e6731e',
-      colorHover: '#ff8933',
-      y: 410
+      colorHover: '#ff9240',
+      y: 420
     }
   },
-  // As barras sólidas horizontais
   bars: [
     {
       category: 'healthcare',
@@ -61,271 +60,311 @@ const TIMELINE_DATA = {
       height: 16
     }
   ],
-  // Textos estáticos que ficam no próprio gráfico (acima ou abaixo da barra)
+  // Rótulos do gráfico com posições calculadas para NUNCA encavalar
   labels: [
-    // HEALTHCARE LABELS
+    // --- HEALTHCARE LABELS ---
     {
-      text: 'Postgraduate in Biomechanics',
+      id: 'lbl-hc-postgrad',
+      milestoneId: 'hc-postgrad',
+      lines: ['Postgraduate in', 'Biomechanics'],
       year: 2012,
-      yOffset: -30,
+      y: 85,
       category: 'healthcare',
-      align: 'middle',
-      type: 'academic'
+      align: 'middle'
     },
     {
-      text: 'Master in Biomechanics',
+      id: 'lbl-hc-master',
+      milestoneId: 'hc-master',
+      lines: ['Master in Biomechanics'],
       year: 2013.8,
-      yOffset: 34,
+      y: 185,
       category: 'healthcare',
-      align: 'middle',
-      type: 'academic'
+      align: 'middle'
     },
     {
-      text: 'Auxiliary Nurse Certification',
+      id: 'lbl-hc-aux',
+      milestoneId: 'hc-aux',
+      lines: ['Auxiliary Nurse', 'Certification'],
       year: 2015.8,
-      yOffset: -30,
+      y: 75, // Nível mais alto para não colidir com Surgical Nurse
+      hasGuideLine: true,
+      guideY1: 95,
+      guideY2: 130,
       category: 'healthcare',
-      align: 'middle',
-      type: 'academic'
+      align: 'middle'
     },
     {
-      text: 'Technician Nurse Certification',
+      id: 'lbl-hc-tech-cert',
+      milestoneId: 'hc-tech',
+      lines: ['Technician Nurse', 'Certification'],
       year: 2017.5,
-      yOffset: 48,
+      y: 185,
       category: 'healthcare',
-      align: 'middle',
-      type: 'academic'
+      align: 'middle'
     },
     {
-      text: 'Technician Nurse',
-      year: 2017.5,
-      yOffset: 30,
+      id: 'lbl-hc-surgical',
+      milestoneId: 'hc-surgical',
+      lines: ['Surgical Assistant Nurse'],
+      year: 2018.6,
+      y: 110, // Escalonado abaixo de Auxiliary Nurse
       category: 'healthcare',
-      align: 'middle',
-      type: 'job'
+      align: 'middle'
     },
     {
-      text: 'Surgical Assistant Nurse',
-      year: 2018.4,
-      yOffset: -30,
+      id: 'lbl-hc-surgical-job',
+      milestoneId: 'hc-surgical',
+      lines: ['Surgical Nurse'],
+      year: 2019.2,
+      y: 125,
+      isJob: true,
       category: 'healthcare',
-      align: 'middle',
-      type: 'academic'
+      align: 'middle'
     },
     {
-      text: 'Surgical Nurse',
-      year: 2018.7,
-      yOffset: -12,
-      category: 'healthcare',
-      align: 'middle',
-      type: 'job'
-    },
-    {
-      text: 'Healthcare Assistant',
+      id: 'lbl-hc-hca',
+      milestoneId: 'hc-intl',
+      lines: ['Healthcare Assistant'],
       year: 2021.5,
-      yOffset: 30,
+      y: 185,
+      isJob: true,
+      hasPeriodLine: true,
+      lineStart: 2019.5,
+      lineEnd: 2023.8,
       category: 'healthcare',
-      align: 'middle',
-      type: 'job',
-      hasLine: true,
-      lineStart: 2019.2,
-      lineEnd: 2024.0
+      align: 'middle'
     },
     {
-      text: 'Healthcare Supervisor',
+      id: 'lbl-hc-sup',
+      milestoneId: 'hc-emt',
+      lines: ['Healthcare Supervisor'],
       year: 2025.2,
-      yOffset: -30,
+      y: 85,
+      isJob: true,
       category: 'healthcare',
-      align: 'middle',
-      type: 'job'
+      align: 'middle'
     },
     {
-      text: 'Emergency Medical Technician (EMT)',
+      id: 'lbl-hc-emt',
+      milestoneId: 'hc-emt',
+      lines: ['Emergency Medical', 'Technician (EMT)'],
       year: 2026.0,
-      yOffset: 36,
+      y: 185,
       category: 'healthcare',
-      align: 'middle',
-      type: 'academic'
+      align: 'middle'
     },
 
-    // EDUCATION LABELS
+    // --- EDUCATION LABELS ---
     {
-      text: 'Bachelor in Physical Education',
+      id: 'lbl-edu-bachelor',
+      milestoneId: 'edu-bachelor',
+      lines: ['Bachelor in Physical Education'],
       year: 2010.0,
-      yOffset: 34,
+      y: 235,
       category: 'education',
-      align: 'middle',
-      type: 'academic'
+      align: 'middle'
     },
     {
-      text: 'P.Ed. Teacher',
+      id: 'lbl-edu-teacher',
+      milestoneId: 'edu-teacher',
+      lines: ['P.Ed. Teacher'],
       year: 2014.2,
-      yOffset: 30,
-      category: 'education',
-      align: 'middle',
-      type: 'job',
-      hasLine: true,
+      y: 320,
+      isJob: true,
+      hasPeriodLine: true,
       lineStart: 2012.3,
-      lineEnd: 2016.2
+      lineEnd: 2016.2,
+      category: 'education',
+      align: 'middle'
     },
     {
-      text: 'College Professor',
+      id: 'lbl-edu-prof',
+      milestoneId: 'edu-prof',
+      lines: ['College Professor'],
       year: 2018.5,
-      yOffset: 30,
-      category: 'education',
-      align: 'middle',
-      type: 'job',
-      hasLine: true,
+      y: 320,
+      isJob: true,
+      hasPeriodLine: true,
       lineStart: 2016.8,
-      lineEnd: 2020.0
+      lineEnd: 2020.0,
+      category: 'education',
+      align: 'middle'
     },
     {
-      text: 'Bachelor in Education',
+      id: 'lbl-edu-lic',
+      milestoneId: 'edu-lic',
+      lines: ['Bachelor in Education'],
       year: 2020.0,
-      yOffset: 48,
+      y: 345,
       category: 'education',
-      align: 'middle',
-      type: 'academic'
+      align: 'middle'
     },
 
-    // IT LABELS
+    // --- IT LABELS ---
     {
-      text: 'Graphic Design',
+      id: 'lbl-it-gd-title',
+      milestoneId: 'it-gd',
+      lines: ['Graphic Design'],
       year: 2005.0,
-      yOffset: -26,
+      y: 380,
       category: 'it',
-      align: 'middle',
-      type: 'academic'
+      align: 'middle'
     },
     {
-      text: 'Graphic Design',
+      id: 'lbl-it-gd-job',
+      milestoneId: 'it-gd',
+      lines: ['Graphic Design'],
       year: 2007.5,
-      yOffset: 30,
-      category: 'it',
-      align: 'middle',
-      type: 'job',
-      hasLine: true,
+      y: 460,
+      isJob: true,
+      hasPeriodLine: true,
       lineStart: 2005.8,
-      lineEnd: 2009.2
-    },
-    {
-      text: 'Technologist in Systems Analysis',
-      year: 2025.2,
-      yOffset: -28,
+      lineEnd: 2009.2,
       category: 'it',
-      align: 'middle',
-      type: 'academic'
+      align: 'middle'
     },
     {
-      text: 'Web and App Developer',
+      id: 'lbl-it-ads',
+      milestoneId: 'it-ads',
+      lines: ['Technologist in Systems Analysis'],
       year: 2025.0,
-      yOffset: 30,
+      y: 380,
       category: 'it',
-      align: 'middle',
-      type: 'job'
+      align: 'middle'
+    },
+    {
+      id: 'lbl-it-dev',
+      milestoneId: 'it-ads',
+      lines: ['Web and App Developer'],
+      year: 2025.0,
+      y: 460,
+      isJob: true,
+      category: 'it',
+      align: 'middle'
     }
   ],
-  // Bolinhas interativas com hover e informações detalhadas
+  // Milestones (bolinhas interativas)
   milestones: [
     {
-      id: 'it-gd-start',
+      id: 'it-gd',
       category: 'it',
       year: 2005.0,
       title: 'Graphic Design & IT Foundations',
-      detail: 'Início da atuação com design gráfico, criação visual, helpdesk e suporte a servidores.',
-      institution: 'Freelance & Agências',
       period: '2005 – 2010',
-      skills: 'Design Gráfico • Identidade Visual • Photoshop • Helpdesk'
+      institution: 'Freelance & Agências de Design',
+      role: 'Graphic Designer & Helpdesk Support',
+      detail: 'Criação de identidades visuais, branding, arte gráfica em Photoshop e suporte técnico a computadores e servidores.',
+      skills: 'Design Gráfico • Photoshop • Tipografia • Helpdesk'
     },
     {
-      id: 'it-ads-finish',
-      category: 'it',
-      year: 2025.2,
-      title: 'Technologist in Systems Analysis & App Dev',
-      detail: 'Graduação em Análise e Desenvolvimento de Sistemas e desenvolvimento de aplicações web/mobile voltadas para a saúde pela LuxSolutions.tech.',
-      institution: 'LuxSolutions.tech • Ensino Superior',
-      period: '2023 – 2026',
-      skills: 'Sistemas Web • HTML/CSS/JS • MySQL • HealthTech'
-    },
-    {
-      id: 'edu-ped-bachelor',
+      id: 'edu-bachelor',
       category: 'education',
       year: 2010.0,
       title: 'Bachelor in Physical Education',
-      detail: 'Formação em Educação Física com forte base em cinesiologia, anatomia, fisiologia do exercício e didática.',
-      institution: 'ACM / YMCA Brasil',
       period: '2006 – 2010',
-      skills: 'Cinesiologia • Fisiologia • Biomecânica Básica'
-    },
-    {
-      id: 'edu-ped-lic',
-      category: 'education',
-      year: 2020.0,
-      title: 'Bachelor in Education & University Professor',
-      detail: 'Conclusão da Licenciatura em Educação e atuação como Professor Universitário lecionando Anatomia, Fisiologia e Biomecânica para Enfermagem e Fisioterapia.',
-      institution: 'Ensino Superior Universitário',
-      period: '2017 – 2020',
-      skills: 'Docência Universitária • Anatomia Aplicada • Fisiologia'
+      institution: 'YMCA Brasil (ACM)',
+      role: 'Graduando & Pesquisador',
+      detail: 'Bacharelado com foco em ciências do movimento humano, cinesiologia, anatomia humana e fisiologia do exercício.',
+      skills: 'Cinesiologia • Fisiologia • Biomecânica Humana'
     },
     {
       id: 'hc-postgrad',
       category: 'healthcare',
       year: 2012.0,
       title: 'Postgraduate in Biomechanics',
-      detail: 'Especialização de Pós-Graduação em Biomecânica da Atividade Física e Saúde.',
-      institution: 'Universidade Gama Filho',
       period: '2012 – 2014',
-      skills: 'Biomecânica Clínica • Análise de Movimento • Saúde'
+      institution: 'Universidade Gama Filho',
+      role: 'Especialista em Biomecânica',
+      detail: 'Pós-graduação lato sensu em Biomecânica da Atividade Física e Saúde, analisando marcha, sobrecarga articular e reabilitação.',
+      skills: 'Análise de Marcha • Biomecânica Clínica • Ergonomia'
     },
     {
       id: 'hc-master',
       category: 'healthcare',
       year: 2013.8,
       title: 'Master of Science (M.Sc.) in Biomechanics',
-      detail: 'Mestrado científico com pesquisa em análise cinemática, estatística e saúde do aparelho locomotor.',
-      institution: 'Universidade São Judas Tadeu',
       period: '2014 – 2018',
-      skills: 'Pesquisa Científica • Bioestatística • Biomecânica Avançada'
+      institution: 'Universidade São Judas Tadeu',
+      role: 'Mestre & Pesquisador Científico',
+      detail: 'Mestrado acadêmico stricto sensu com pesquisa aprofundada em análise cinemática, bioestatística e testes laboratoriais de movimento.',
+      skills: 'Bioestatística • Análise Cinemática • Pesquisa Científica'
     },
     {
-      id: 'hc-aux-nurse',
+      id: 'hc-aux',
       category: 'healthcare',
       year: 2015.8,
-      title: 'Auxiliary & Technician Nurse Certification',
-      detail: 'Formação técnica em enfermagem com prática hospitalar de urgência e cuidados ao paciente.',
-      institution: 'Escola de Enfermagem Ciclo Vittal',
+      title: 'Auxiliary Nurse Certification',
       period: '2016 – 2018',
-      skills: 'Enfermagem Clínica • Farmacologia • Cuidados Hospitalares'
+      institution: 'Escola de Enfermagem Ciclo Vittal',
+      role: 'Estudante de Enfermagem & Estagiário Clínico',
+      detail: 'Capacitação prática em fundamentos de enfermagem, farmacologia, aferição de sinais vitais e procedimentos hospitalares.',
+      skills: 'Cuidados de Enfermagem • Farmacologia • Procedimentos Clínicos'
     },
     {
-      id: 'hc-tech-nurse',
+      id: 'hc-tech',
       category: 'healthcare',
       year: 2017.5,
       title: 'Technician Nurse in Hospital Care',
-      detail: 'Atuação clínica em hospitais públicos e privados, prestando assistência direta a pacientes em internação e pronto atendimento.',
-      institution: 'Hospitais Públicos e Privados',
       period: '2017 – 2018',
-      skills: 'Procedimentos Clínicos • Triagem • Trabalho em Equipe'
+      institution: 'Hospitais Públicos e Privados',
+      role: 'Técnico de Enfermagem Hospitalar',
+      detail: 'Atuação clínica em enfermarias e pronto-socorro, prestando assistência direta a pacientes com diferentes quadros de saúde.',
+      skills: 'Atendimento Hospitalar • Triagem • Trabalho Multidisciplinar'
     },
     {
-      id: 'hc-surgical-nurse',
+      id: 'hc-surgical',
       category: 'healthcare',
-      year: 2018.4,
+      year: 2018.6,
       title: 'Surgical Assistant Nurse',
-      detail: 'Certificação em Instrumentação e Assistência Cirúrgica pelo CENEP. Atuação em centro cirúrgico nos hospitais Votorantim e AMHEMED, incluindo atuação intensiva na linha de frente da pandemia.',
-      institution: 'CENEP • Hospital Votorantim • AMHEMED',
       period: '2018 – 2020',
-      skills: 'Centro Cirúrgico • Instrumentação • Assepsia • Covid-19'
+      institution: 'CENEP • Hospital Votorantim • AMHEMED',
+      role: 'Instrumentador & Auxiliar em Centro Cirúrgico',
+      detail: 'Certificação pelo CENEP e atuação intensiva em bloco cirúrgico (cirurgias gerais e ortopédicas), além de linha de frente no combate à Covid-19.',
+      skills: 'Centro Cirúrgico • Instrumentação • Assepsia • Cuidados Críticos'
+    },
+    {
+      id: 'edu-lic',
+      category: 'education',
+      year: 2020.0,
+      title: 'Bachelor in Education & University Professor',
+      period: '2017 – 2020',
+      institution: 'Ensino Superior Universitário',
+      role: 'Professor Universitário & Licenciado',
+      detail: 'Docência no ensino superior lecionando Anatomia Humana, Fisiologia e Biomecânica para turmas de Enfermagem e Fisioterapia.',
+      skills: 'Docência Universitária • Anatomia Humana • Fisiologia'
+    },
+    {
+      id: 'hc-intl',
+      category: 'healthcare',
+      year: 2021.5,
+      title: 'Healthcare Assistant (Ireland & Portugal)',
+      period: '2021 – 2024',
+      institution: 'InisCare • The Marlay Nursing Home • Portugal',
+      role: 'Senior Healthcare Assistant',
+      detail: 'Experiência internacional em cuidados a idosos, atendimento humanizado e rotinas de saúde em Dublin e Portugal.',
+      skills: 'Cuidados Geriátricos • Protocolos Internacionais • Empatia'
+    },
+    {
+      id: 'it-ads',
+      category: 'it',
+      year: 2025.0,
+      title: 'Technologist in Systems Analysis & HealthTech Dev',
+      period: '2023 – 2026',
+      institution: 'LuxSolutions.tech • Faculdade ADS & Alura Dev',
+      role: 'Full-Stack Developer & Founder',
+      detail: 'Graduação em Análise e Desenvolvimento de Sistemas e desenvolvimento de aplicações web/mobile voltadas para a saúde pela LuxSolutions.tech.',
+      skills: 'Sistemas Web • HTML5 / CSS3 • JavaScript • MySQL • HealthTech'
     },
     {
       id: 'hc-emt',
       category: 'healthcare',
       year: 2026.0,
       title: 'Emergency Medical Technician (EMT) & Supervisor',
-      detail: 'Treinamento e certificação em Atendimento Pré-Hospitalar (EMT na Irlanda) e supervisão em cuidados de saúde.',
-      institution: 'Medicall Emergency Training Ireland',
       period: '2024 – 2026',
-      skills: 'APH / Trauma • Suporte Básico de Vida • EMT Ireland'
+      institution: 'Medicall Emergency Training Ireland',
+      role: 'EMT Trainee & Healthcare Supervisor',
+      detail: 'Treinamento certificado PHECC na Irlanda em atendimento pré-hospitalar, trauma, suporte avançado e voluntariado em ambulância.',
+      skills: 'Atendimento Pré-Hospitalar (APH) • Trauma • RCP / DEA'
     }
   ]
 };
