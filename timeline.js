@@ -233,7 +233,7 @@
             <h3 class="insp-title">${m.title}</h3>
             <div class="insp-inst">${m.institution} • <em>${m.role}</em></div>
             <p class="insp-detail">${m.detail}</p>
-            <div class="insp-skills"><strong>Competências aplicadas:</strong> ${m.skills}</div>
+            <div class="insp-skills"><strong>Key Skills &amp; Competencies:</strong> ${m.skills}</div>
           `;
           inspectorCard.classList.add('active');
         }

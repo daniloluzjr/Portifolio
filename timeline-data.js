@@ -8,7 +8,7 @@ const TIMELINE_DATA = {
     maxYear: 2026.5,
     viewBoxWidth: 1240,
     viewBoxHeight: 560,
-    marginLeft: 175, // Respiro generoso para os títulos ficarem alinhados
+    marginLeft: 175,
     marginRight: 60
   },
   categories: {
@@ -60,7 +60,6 @@ const TIMELINE_DATA = {
       height: 16
     }
   ],
-  // Rótulos do gráfico com posições calculadas para NUNCA encavalar
   labels: [
     // --- HEALTHCARE LABELS ---
     {
@@ -208,7 +207,7 @@ const TIMELINE_DATA = {
       year: 2005.0,
       y: 380,
       category: 'it',
-      align: 'start' // Alinhado ao início para se projetar sobre a barra
+      align: 'start'
     },
     {
       id: 'lbl-it-gd-job',
@@ -243,7 +242,6 @@ const TIMELINE_DATA = {
       align: 'middle'
     }
   ],
-  // Milestones (bolinhas interativas)
   milestones: [
     {
       id: 'it-gd',
@@ -251,10 +249,10 @@ const TIMELINE_DATA = {
       year: 2005.0,
       title: 'Graphic Design & IT Foundations',
       period: '2005 – 2010',
-      institution: 'Freelance & Agências de Design',
+      institution: 'Freelance & Design Studios',
       role: 'Graphic Designer & Helpdesk Support',
-      detail: 'Criação de identidades visuais, branding, arte gráfica em Photoshop e suporte técnico a computadores e servidores.',
-      skills: 'Design Gráfico • Photoshop • Tipografia • Helpdesk'
+      detail: 'Creation of corporate visual identities, typography, branding assets in Photoshop/Corel, alongside hands-on helpdesk, system backups, and server maintenance.',
+      skills: 'Graphic Design • Photoshop • Typography • Helpdesk & Systems'
     },
     {
       id: 'edu-bachelor',
@@ -262,10 +260,10 @@ const TIMELINE_DATA = {
       year: 2010.0,
       title: 'Bachelor in Physical Education',
       period: '2006 – 2010',
-      institution: 'YMCA Brasil (ACM)',
-      role: 'Graduando & Pesquisador',
-      detail: 'Bacharelado com foco em ciências do movimento humano, cinesiologia, anatomia humana e fisiologia do exercício.',
-      skills: 'Cinesiologia • Fisiologia • Biomecânica Humana'
+      institution: 'YMCA Brazil (ACM Faculty)',
+      role: 'Undergraduate & Student Researcher',
+      detail: 'Four-year degree focused on kinesiology, human anatomy, exercise physiology, motor development, and sports pedagogy.',
+      skills: 'Kinesiology • Exercise Physiology • Human Anatomy • Pedagogy'
     },
     {
       id: 'hc-postgrad',
@@ -274,9 +272,9 @@ const TIMELINE_DATA = {
       title: 'Postgraduate in Biomechanics',
       period: '2012 – 2014',
       institution: 'Universidade Gama Filho',
-      role: 'Especialista em Biomecânica',
-      detail: 'Pós-graduação lato sensu em Biomecânica da Atividade Física e Saúde, analisando marcha, sobrecarga articular e reabilitação.',
-      skills: 'Análise de Marcha • Biomecânica Clínica • Ergonomia'
+      role: 'Biomechanics Specialist',
+      detail: 'Specialization diploma in Biomechanics of Physical Activity and Health, focusing on gait analysis, musculoskeletal loading, and therapeutic movement protocols.',
+      skills: 'Gait Analysis • Clinical Biomechanics • Ergonomics • Joint Kinetics'
     },
     {
       id: 'hc-master',
@@ -285,20 +283,20 @@ const TIMELINE_DATA = {
       title: 'Master of Science (M.Sc.) in Biomechanics',
       period: '2014 – 2018',
       institution: 'Universidade São Judas Tadeu',
-      role: 'Mestre & Pesquisador Científico',
-      detail: 'Mestrado acadêmico stricto sensu com pesquisa aprofundada em análise cinemática, bioestatística e testes laboratoriais de movimento.',
-      skills: 'Bioestatística • Análise Cinemática • Pesquisa Científica'
+      role: 'Master of Science & Academic Researcher',
+      detail: 'Scientific thesis research investigating kinematic motion capture, clinical biostatistics, electromyography, and laboratory movement modeling.',
+      skills: 'Scientific Research • Biostatistics • Motion Capture • Academic Writing'
     },
     {
       id: 'hc-aux',
       category: 'healthcare',
       year: 2015.8,
-      title: 'Auxiliary Nurse Certification',
+      title: 'Auxiliary & Technician Nurse Certification',
       period: '2016 – 2018',
-      institution: 'Escola de Enfermagem Ciclo Vittal',
-      role: 'Estudante de Enfermagem & Estagiário Clínico',
-      detail: 'Capacitação prática em fundamentos de enfermagem, farmacologia, aferição de sinais vitais e procedimentos hospitalares.',
-      skills: 'Cuidados de Enfermagem • Farmacologia • Procedimentos Clínicos'
+      institution: 'Ciclo Vittal Nursing School',
+      role: 'Nursing Student & Clinical Intern',
+      detail: 'Hands-on clinical qualification covering patient triage, pharmacology, vital signs monitoring, bedside procedures, and hospital emergency care.',
+      skills: 'Clinical Nursing • Pharmacology • Bedside Care • Triage'
     },
     {
       id: 'hc-tech',
@@ -306,10 +304,10 @@ const TIMELINE_DATA = {
       year: 2017.5,
       title: 'Technician Nurse in Hospital Care',
       period: '2017 – 2018',
-      institution: 'Hospitais Públicos e Privados',
-      role: 'Técnico de Enfermagem Hospitalar',
-      detail: 'Atuação clínica em enfermarias e pronto-socorro, prestando assistência direta a pacientes com diferentes quadros de saúde.',
-      skills: 'Atendimento Hospitalar • Triagem • Trabalho Multidisciplinar'
+      institution: 'Public & Private Hospital Units',
+      role: 'Hospital Staff Nurse Technician',
+      detail: 'Frontline hospital inpatient nursing, emergency room patient stabilization, medication administration, and interdisciplinary patient monitoring.',
+      skills: 'Acute Care • Bedside Procedures • Patient Safety • Teamwork'
     },
     {
       id: 'hc-surgical',
@@ -318,9 +316,9 @@ const TIMELINE_DATA = {
       title: 'Surgical Assistant Nurse',
       period: '2018 – 2020',
       institution: 'CENEP • Hospital Votorantim • AMHEMED',
-      role: 'Instrumentador & Auxiliar em Centro Cirúrgico',
-      detail: 'Certificação pelo CENEP e atuação intensiva em bloco cirúrgico (cirurgias gerais e ortopédicas), além de linha de frente no combate à Covid-19.',
-      skills: 'Centro Cirúrgico • Instrumentação • Assepsia • Cuidados Críticos'
+      role: 'Surgical Assistant & Operating Room Nurse',
+      detail: 'Certified surgical instrumentation and operating theater management across general and orthopedic surgeries, sterile field preservation, and front-line Covid-19 response.',
+      skills: 'Operating Room Protocols • Surgical Instrumentation • Aseptic Field • Crisis Response'
     },
     {
       id: 'edu-lic',
@@ -328,10 +326,10 @@ const TIMELINE_DATA = {
       year: 2020.0,
       title: 'Bachelor in Education & University Professor',
       period: '2017 – 2020',
-      institution: 'Ensino Superior Universitário',
-      role: 'Professor Universitário & Licenciado',
-      detail: 'Docência no ensino superior lecionando Anatomia Humana, Fisiologia e Biomecânica para turmas de Enfermagem e Fisioterapia.',
-      skills: 'Docência Universitária • Anatomia Humana • Fisiologia'
+      institution: 'Higher Education Universities',
+      role: 'Faculty Professor & Licensed Educator',
+      detail: 'University lecturing in Human Anatomy, Systemic Physiology, and Movement Biomechanics for undergraduate Nursing, Physiotherapy, and Physical Education cohorts.',
+      skills: 'Higher Education Teaching • Applied Anatomy • Physiology • Curriculum Design'
     },
     {
       id: 'hc-intl',
@@ -341,8 +339,8 @@ const TIMELINE_DATA = {
       period: '2021 – 2024',
       institution: 'InisCare • The Marlay Nursing Home • Portugal',
       role: 'Senior Healthcare Assistant',
-      detail: 'Experiência internacional em cuidados a idosos, atendimento humanizado e rotinas de saúde em Dublin e Portugal.',
-      skills: 'Cuidados Geriátricos • Protocolos Internacionais • Empatia'
+      detail: 'Delivering person-centered elderly care, complex palliative assistance, and rehabilitation support in Dublin and Portugal according to international standards.',
+      skills: 'Geriatric Care • International Standards • Person-Centered Care • Palliative Support'
     },
     {
       id: 'it-ads',
@@ -350,10 +348,10 @@ const TIMELINE_DATA = {
       year: 2025.0,
       title: 'Technologist in Systems Analysis & HealthTech Dev',
       period: '2023 – 2026',
-      institution: 'LuxSolutions.tech • Faculdade ADS & Alura Dev',
+      institution: 'LuxSolutions.tech • Higher ADS College & Alura Dev',
       role: 'Full-Stack Developer & Founder',
-      detail: 'Graduação em Análise e Desenvolvimento de Sistemas e desenvolvimento de aplicações web/mobile voltadas para a saúde pela LuxSolutions.tech.',
-      skills: 'Sistemas Web • HTML5 / CSS3 • JavaScript • MySQL • HealthTech'
+      detail: 'Graduating as a Technologist in Systems Analysis and building digital health web and mobile applications with LuxSolutions.tech to optimize clinical workflows.',
+      skills: 'Web Applications • HTML5 / CSS3 • JavaScript • MySQL • HealthTech UX'
     },
     {
       id: 'hc-emt',
@@ -363,8 +361,8 @@ const TIMELINE_DATA = {
       period: '2024 – 2026',
       institution: 'Medicall Emergency Training Ireland',
       role: 'EMT Trainee & Healthcare Supervisor',
-      detail: 'Treinamento certificado PHECC na Irlanda em atendimento pré-hospitalar, trauma, suporte avançado e voluntariado em ambulância.',
-      skills: 'Atendimento Pré-Hospitalar (APH) • Trauma • RCP / DEA'
+      detail: 'PHECC-certified emergency medical training in pre-hospital trauma, advanced basic life support (CPR/AED), pediatric emergency care, and volunteer ambulance response.',
+      skills: 'Emergency Medical Care • Pre-Hospital Trauma • CPR / AED • Ambulance Operations'
     }
   ]
 };
