@@ -175,6 +175,8 @@ header.site-header {
   color: var(--text-muted);
   line-height: 1.75;
   margin-bottom: 1.2rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .intro-bio-card p strong {
