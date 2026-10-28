@@ -35,12 +35,12 @@
       <svg class="timeline-svg-clean" viewBox="0 0 ${viewBoxWidth} ${viewBoxHeight}" 
            preserveAspectRatio="xMidYMid meet" role="img" aria-label="Career Timeline (2005-2026)">
         
-        <!-- Header inside SVG -->
+        <!-- Header inside SVG aligned to the left corner -->
         <g class="chart-header-group">
-          <text x="${viewBoxWidth / 2}" y="38" class="chart-main-title" text-anchor="middle">
+          <text x="40" y="38" class="chart-main-title" text-anchor="start">
             Career Timeline (2005–2026)
           </text>
-          <text x="${viewBoxWidth / 2}" y="60" class="chart-sub-title" text-anchor="middle">
+          <text x="40" y="60" class="chart-sub-title" text-anchor="start">
             Professional Experience and Academic Path
           </text>
         </g>
