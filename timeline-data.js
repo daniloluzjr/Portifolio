@@ -5,7 +5,7 @@
 const TIMELINE_DATA = {
   config: {
     minYear: 2005,
-    maxYear: 2026.5,
+    maxYear: 2027.2,
     viewBoxWidth: 1240,
     viewBoxHeight: 560,
     marginLeft: 175,
@@ -56,7 +56,7 @@ const TIMELINE_DATA = {
     {
       category: 'it',
       start: 2023.3,
-      end: 2026,
+      end: 2027.0, // Extended into 2026 and 2027
       height: 16
     }
   ],
@@ -347,10 +347,10 @@ const TIMELINE_DATA = {
       category: 'it',
       year: 2025.0,
       title: 'Technologist in Systems Analysis & HealthTech Dev',
-      period: '2023 – 2026',
+      period: '2023 – 2027+',
       institution: 'LuxSolutions.tech • Higher ADS College & Alura Dev',
       role: 'Full-Stack Developer & Founder',
-      detail: 'Graduating as a Technologist in Systems Analysis and building digital health web and mobile applications with LuxSolutions.tech to optimize clinical workflows.',
+      detail: 'Graduating as a Technologist in Systems Analysis and actively building digital health web and mobile applications with LuxSolutions.tech through 2026, 2027, and beyond.',
       skills: 'Web Applications • HTML5 / CSS3 • JavaScript • MySQL • HealthTech UX'
     },
     {
