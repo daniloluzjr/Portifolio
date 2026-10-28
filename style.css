@@ -649,11 +649,11 @@ header.site-header {
 .nav-card-btn.btn-edu:hover { border-color: var(--color-edu); }
 
 /* ==========================================================
-   SUBPAGES SHARED STYLES (TECH, NURSING, EDUCATION)
+   SUBPAGES EDITORIAL LAYOUT (TEXT WRAPS AROUND LARGE IMAGE)
    ========================================================== */
 .subpage-container {
-  max-width: 1040px;
-  margin: 1rem auto 4rem;
+  max-width: 1120px;
+  margin: 1.5rem auto 4rem;
   padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
@@ -663,10 +663,10 @@ header.site-header {
 }
 
 .subpage-card {
-  background: linear-gradient(160deg, rgba(17, 24, 39, 0.85) 0%, rgba(9, 14, 26, 0.95) 100%);
+  background: linear-gradient(160deg, rgba(17, 24, 39, 0.88) 0%, rgba(9, 14, 26, 0.96) 100%);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-xl);
-  padding: 2.5rem;
+  padding: 2.8rem;
   box-shadow: 0 25px 60px rgba(0,0,0,0.5);
   position: relative;
   overflow: hidden;
@@ -685,21 +685,26 @@ header.site-header {
 .card-nursing::before { background: linear-gradient(90deg, #059669, #10b981); }
 .card-edu::before { background: linear-gradient(90deg, #0284c7, #06b6d4); }
 
-.subpage-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.35fr;
-  gap: 2.5rem;
-  align-items: start;
+.editorial-article::after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
-.subpage-img-frame {
+/* Floating Large Image Frame (tipo jornal/revista) */
+.editorial-img-frame {
+  float: left;
+  width: 440px;
+  max-width: 48%;
+  margin: 0.6rem 2.2rem 1.6rem 0;
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  background: #000;
 }
 
-.subpage-img-frame img {
+.editorial-img-frame img {
   width: 100%;
   height: auto;
   display: block;
@@ -713,7 +718,7 @@ header.site-header {
   border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 700;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
 }
 
 .badge-it { background: rgba(249, 115, 22, 0.15); border: 1px solid #f97316; color: #fdba74; }
@@ -721,7 +726,7 @@ header.site-header {
 .badge-edu { background: rgba(6, 182, 212, 0.15); border: 1px solid #06b6d4; color: #7dd3fc; }
 
 .subpage-title {
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   margin-bottom: 1.2rem;
@@ -732,9 +737,9 @@ header.site-header {
 .subpage-highlight {
   padding: 1.1rem 1.3rem;
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  font-size: 0.98rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 1.4rem;
+  line-height: 1.65;
   text-align: justify;
   text-justify: inter-word;
 }
@@ -746,7 +751,7 @@ header.site-header {
 .subpage-text {
   font-size: 1.05rem;
   color: var(--text-muted);
-  line-height: 1.8;
+  line-height: 1.85;
   margin-bottom: 1.4rem;
   text-align: justify;
   text-justify: inter-word;
@@ -757,6 +762,7 @@ header.site-header {
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 1.5rem;
+  clear: both;
 }
 
 .tag-pill {
@@ -767,6 +773,15 @@ header.site-header {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
   color: var(--text-main);
+}
+
+@media (max-width: 820px) {
+  .editorial-img-frame {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem 0 1.5rem 0;
+  }
 }
 
 /* ==========================================================
