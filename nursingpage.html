@@ -1,39 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danilo Luz Jr.</title>
-    <link rel="stylesheet" href="nursing.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthcare &amp; Clinical Nursing | Danilo Luz Jr.</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .subpage-container {
+      max-width: 1000px;
+      margin: 2rem auto 5rem;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .back-btn-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1.15rem;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-glass);
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: var(--transition);
+      width: fit-content;
+    }
+    .back-btn-pill:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateX(-3px);
+    }
+    .subpage-card {
+      background: linear-gradient(160deg, rgba(17, 24, 39, 0.8) 0%, rgba(9, 14, 26, 0.95) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-xl);
+      padding: 3rem;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    .subpage-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #059669, #10b981, #34d399);
+    }
+    .subpage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    .subpage-img-frame {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+    .subpage-img-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .subpage-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      background: var(--health-bg);
+      border: 1px solid var(--health-color);
+      color: #6ee7b7;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+    .subpage-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+      line-height: 1.2;
+    }
+    .subpage-text {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+    .subpage-highlight {
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 3px solid var(--health-color);
+      padding: 1rem 1.2rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.95rem;
+      color: #a7f3d0;
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 800px) {
+      .subpage-grid { grid-template-columns: 1fr; }
+      .subpage-card { padding: 1.8rem; }
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <div class="header-icons">
-            <nav class="left-icons">
-                <a href="index.html"><img src="assets/back.png" alt="Ícone back"></a>
-            </nav>
-    
-            <nav class="right-icons">
-                <a href="https://www.linkedin.com/in/professorluz/" target="_blank"><img src="assets/linkdin.png" alt="Ícone Linkdin"></a>
-                
-                <a href="https://github.com/daniloluzjr" target="_blank"><img src="assets/github.png" alt="Ícone GitHub"></a>
-                
-                <a href="https://wa.me/+353874786085" target="_blank"><img src="assets/whatsapp.png" alt="Ícone WhatsApp"></a>
-            </nav>
-        </div>
-    </header>
-    
-    <div class="content">
-        <img src="assets/FotoNurse.png" class="imagemesquerda">
-        <p class="texto">Since 2016, I have worked as a Nursing Technician, gaining extensive experience in both public and private hospitals — including the demanding period of the Covid-19 pandemic. In surgical centers, I served as an Assistant Nurse, providing essential patient care while also applying my design skills to create visual materials and organize clinical information. My dedication to healthcare led me to teach in higher education, guiding nursing, physiotherapy, and physical education students. In 2021, I moved to Ireland, expanding my experience in home care and nursing homes, and later in Portugal, where I specialized in personalized elderly care. Recently, I completed my Emergency Medical Technician (EMT) course, and I plan to begin volunteering soon with a rescue team in Ireland. Combining a strong academic foundation with hands-on practice, I continue developing digital tools to support caregivers in their daily work and improve the quality of care.</p>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logoluzpqn.png" alt="Danilo Luz" />
+        <span class="brand-text">Danilo Luz Jr.</span>
+      </a>
+
+      <div class="nav-actions">
+        <a href="index.html" class="back-btn-pill">&larr; Back to Career Matrix</a>
+        <a href="assets/Luz_Danilo_Resume_ENG.pdf" class="btn-cv-download" download target="_blank" rel="noopener">
+          <span>📄 Resume</span>
+        </a>
+      </div>
     </div>
-        
-    <footer>
-		<img src="assets/logoluzpqn.png" class="img-footer">
-        <p class="copyright">&copy; Produced by Danilo Luz Jr. - 2023</p>
-	</footer>
-    <script src="techpage.js"></script>
+  </header>
+
+  <main class="subpage-container">
+    <a href="index.html" class="back-btn-pill">&larr; Return to Interactive Timeline</a>
+
+    <div class="subpage-card">
+      <div class="subpage-grid">
+        <div class="subpage-img-frame">
+          <img src="assets/FotoNurse.png" alt="Danilo Luz Nursing Timeline" />
+        </div>
+
+        <div class="subpage-content">
+          <div class="subpage-badge">
+            <span>🩺</span>
+            <span>Healthcare, Surgery &amp; Emergency</span>
+          </div>
+
+          <h1 class="subpage-title">Healthcare &amp; Emergency Nursing</h1>
+
+          <div class="subpage-highlight">
+            "Clinical frontline precision across surgical wards, international eldercare, and emergency medical response."
+          </div>
+
+          <p class="subpage-text">
+            Since 2016, I have practiced as a Qualified Nurse Technician, cultivating extensive clinical experience across public and private hospitals, including frontline duty during the height of the Covid-19 pandemic.
+          </p>
+
+          <p class="subpage-text">
+            In operating theaters, I served as a Certified Surgical Assistant Nurse, ensuring uncompromising patient safety, maintaining sterile operating fields, and managing intraoperative surgical instrumentation.
+          </p>
+
+          <p class="subpage-text">
+            In 2021, I transitioned to international healthcare in Ireland with InisCare and The Marlay Nursing Home, followed by specialized elderly care in Portugal. Recently, I completed formal Emergency Medical Technician (EMT) training aligned with PHECC standards, preparing to volunteer with Irish ambulance rescue operations.
+          </p>
+
+          <div class="hero-tags" style="margin-top: 1.5rem;">
+            <span class="hero-tag">Surgical Instrumentation</span>
+            <span class="hero-tag">EMT Certified</span>
+            <span class="hero-tag">Operating Room Coordination</span>
+            <span class="hero-tag">Emergency Protocols</span>
+            <span class="hero-tag">Geriatric &amp; Palliative Care</span>
+            <span class="hero-tag">Clinical Triage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-copyright">&copy; 2026 Produced by Danilo Luz Jr. • Healthcare &amp; Clinical Sciences</p>
+    </div>
+  </footer>
 </body>
 </html>

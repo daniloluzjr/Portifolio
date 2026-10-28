@@ -1,39 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danilo Luz Jr.</title>
-    <link rel="stylesheet" href="techpage.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT &amp; Systems Analysis | Danilo Luz Jr.</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .subpage-container {
+      max-width: 1000px;
+      margin: 2rem auto 5rem;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .back-btn-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1.15rem;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-glass);
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: var(--transition);
+      width: fit-content;
+    }
+    .back-btn-pill:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateX(-3px);
+    }
+    .subpage-card {
+      background: linear-gradient(160deg, rgba(17, 24, 39, 0.8) 0%, rgba(9, 14, 26, 0.95) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-xl);
+      padding: 3rem;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    .subpage-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #ea580c, #f97316, #fb923c);
+    }
+    .subpage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    .subpage-img-frame {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+    .subpage-img-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .subpage-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      background: var(--it-bg);
+      border: 1px solid var(--it-color);
+      color: #fdba74;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+    .subpage-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+      line-height: 1.2;
+    }
+    .subpage-text {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+    .subpage-highlight {
+      background: rgba(249, 115, 22, 0.08);
+      border-left: 3px solid var(--it-color);
+      padding: 1rem 1.2rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.95rem;
+      color: #fed7aa;
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 800px) {
+      .subpage-grid { grid-template-columns: 1fr; }
+      .subpage-card { padding: 1.8rem; }
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <div class="header-icons">
-            <nav class="left-icons">
-                <a href="index.html"><img src="assets/back.png" alt="Ícone back"></a>
-            </nav>
-    
-            <nav class="right-icons">
-                <a href="https://www.linkedin.com/in/professorluz/" target="_blank"><img src="assets/linkdin.png" alt="Ícone Linkdin"></a>
-                
-                <a href="https://github.com/daniloluzjr" target="_blank"><img src="assets/github.png" alt="Ícone GitHub"></a>
-                      
-                <a href="https://wa.me/+353874786085" target="_blank"><img src="assets/whatsapp.png" alt="Ícone WhatsApp"></a>
-            </nav>
-        </div>
-    </header>
-    
-    <div class="content">
-        <img src="assets/FotoTech.png" class="imagemesquerda">
-        <p class="texto">My passion for computers began with a 486, sparking a lifelong fascination with technology. After studying Computer Science and facing academic challenges, I redirected my path toward healthcare, where I strengthened my communication and problem-solving skills. In the 2000s, I worked in helpdesk support, managing tickets and servers, and learning the value of organization and teamwork. In 2015, I returned to IT through design, creating logos, invitations, and business cards. Since 2023, I have fully reentered the tech field, graduating in Systems Analysis and advancing my skills at Alura Dev School. Focusing on HTML, CSS, and MySQL, I now develop digital health applications at LuxSolutions.tech, where technology meets care to improve lives. Always open to collaboration and innovation opportunities.</p>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logoluzpqn.png" alt="Danilo Luz" />
+        <span class="brand-text">Danilo Luz Jr.</span>
+      </a>
+
+      <div class="nav-actions">
+        <a href="index.html" class="back-btn-pill">&larr; Back to Career Matrix</a>
+        <a href="assets/Luz_Danilo_Resume_ENG.pdf" class="btn-cv-download" download target="_blank" rel="noopener">
+          <span>📄 Resume</span>
+        </a>
+      </div>
     </div>
-        
-    <footer>
-		<img src="assets/logoluzpqn.png" class="img-footer">
-        <p class="copyright">&copy; Produced by Danilo Luz Jr. - 2023</p>
-	</footer>
-    <script src="techpage.js"></script>
+  </header>
+
+  <main class="subpage-container">
+    <a href="index.html" class="back-btn-pill">&larr; Return to Interactive Timeline</a>
+
+    <div class="subpage-card">
+      <div class="subpage-grid">
+        <div class="subpage-img-frame">
+          <img src="assets/FotoTech.png" alt="Danilo Luz IT Timeline" />
+        </div>
+
+        <div class="subpage-content">
+          <div class="subpage-badge">
+            <span>💻</span>
+            <span>Technology &amp; Software Engineering</span>
+          </div>
+
+          <h1 class="subpage-title">IT, Systems Analysis &amp; HealthTech</h1>
+
+          <div class="subpage-highlight">
+            "Bridging two decades of computer fascination with real-world clinical problem solving through LuxSolutions.tech."
+          </div>
+
+          <p class="subpage-text">
+            My passion for computing ignited with an early 486 machine, sparking a lifelong exploration of digital architecture and systems. In the 2000s, I worked in helpdesk support and infrastructure management, maintaining server environments, resolving critical tickets, and mastering structured teamwork.
+          </p>
+
+          <p class="subpage-text">
+            In 2015, I advanced my digital journey through graphic and brand design, engineering visual identities, logos, and promotional typography.
+          </p>
+
+          <p class="subpage-text">
+            Since 2023, I have fully consolidated my software engineering career: graduating as a Technologist in Systems Analysis and Development (ADS) and expanding modern full-stack capabilities at Alura Dev School. Specializing in modern JavaScript, HTML5/CSS3, responsive frontends, and MySQL/PostgreSQL databases, I architect and build dedicated digital health applications at <a href="https://luxsolutions.tech" target="_blank" rel="noopener" style="color: #38bdf8; font-weight: 600;">LuxSolutions.tech</a>.
+          </p>
+
+          <div class="hero-tags" style="margin-top: 1.5rem;">
+            <span class="hero-tag">HTML5 &amp; CSS3</span>
+            <span class="hero-tag">JavaScript / ES6+</span>
+            <span class="hero-tag">MySQL &amp; Databases</span>
+            <span class="hero-tag">Systems Architecture</span>
+            <span class="hero-tag">HealthTech UX</span>
+            <span class="hero-tag">Git &amp; Cloud Deployment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-copyright">&copy; 2026 Produced by Danilo Luz Jr. • HealthTech &amp; Systems Analysis</p>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,38 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danilo Luz Jr.</title>
-    <link rel="stylesheet" href="education.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Science &amp; Education | Danilo Luz Jr.</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .subpage-container {
+      max-width: 1000px;
+      margin: 2rem auto 5rem;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .back-btn-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1.15rem;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-glass);
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: var(--transition);
+      width: fit-content;
+    }
+    .back-btn-pill:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateX(-3px);
+    }
+    .subpage-card {
+      background: linear-gradient(160deg, rgba(17, 24, 39, 0.8) 0%, rgba(9, 14, 26, 0.95) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-xl);
+      padding: 3rem;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    .subpage-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #0284c7, #06b6d4, #38bdf8);
+    }
+    .subpage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    .subpage-img-frame {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+    .subpage-img-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .subpage-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      background: var(--edu-bg);
+      border: 1px solid var(--edu-color);
+      color: #7dd3fc;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+    .subpage-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+      line-height: 1.2;
+    }
+    .subpage-text {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+    .subpage-highlight {
+      background: rgba(6, 182, 212, 0.08);
+      border-left: 3px solid var(--edu-color);
+      padding: 1rem 1.2rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.95rem;
+      color: #bae6fd;
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 800px) {
+      .subpage-grid { grid-template-columns: 1fr; }
+      .subpage-card { padding: 1.8rem; }
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <div class="header-icons">
-            <nav class="left-icons">
-                <a href="index.html"><img src="assets/back.png" alt="Ícone back"></a>
-            </nav>
-    
-            <nav class="right-icons">
-                <a href="https://www.linkedin.com/in/professorluz/" target="_blank"><img src="assets/linkdin.png" alt="Ícone Linkdin"></a>
-                
-                <a href="https://github.com/daniloluzjr" target="_blank"><img src="assets/github.png" alt="Ícone GitHub"></a>
-                
-                <a href="https://wa.me/+353874786085" target="_blank"><img src="assets/whatsapp.png" alt="Ícone WhatsApp"></a>
-            </nav>
-        </div>
-    </header>
-    
-    <div class="content">
-        <img src="assets/FotoTeach.png" class="imagemesquerda">
-        <p class="texto">My teaching career began in 2006 when I entered the College of Physical Education, developing a passion for helping others learn and grow through movement and health. Over the years, I gained experience teaching in schools, universities, and fitness centers, refining my ability to connect theory with real-world practice. Academically, I hold degrees in Education and a Master’s with Postgraduate specialization in Biomechanics of Physical Activity and Health. By 2020, I had progressed to the position of University Professor, teaching subjects related to anatomy, physiology, and movement science to future healthcare and education professionals. These experiences have strengthened my commitment to education and to inspiring the next generation of professionals in the health and wellness fields.</p>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logoluzpqn.png" alt="Danilo Luz" />
+        <span class="brand-text">Danilo Luz Jr.</span>
+      </a>
+
+      <div class="nav-actions">
+        <a href="index.html" class="back-btn-pill">&larr; Back to Career Matrix</a>
+        <a href="assets/Luz_Danilo_Resume_ENG.pdf" class="btn-cv-download" download target="_blank" rel="noopener">
+          <span>📄 Resume</span>
+        </a>
+      </div>
     </div>
-        
-    <footer>
-		<img src="assets/logoluzpqn.png" class="img-footer">
-        <p class="copyright">&copy; Produced by Danilo Luz Jr. - 2023</p>
-	</footer>
+  </header>
+
+  <main class="subpage-container">
+    <a href="index.html" class="back-btn-pill">&larr; Return to Interactive Timeline</a>
+
+    <div class="subpage-card">
+      <div class="subpage-grid">
+        <div class="subpage-img-frame">
+          <img src="assets/FotoTeach.png" alt="Danilo Luz Education Timeline" />
+        </div>
+
+        <div class="subpage-content">
+          <div class="subpage-badge">
+            <span>🎓</span>
+            <span>Academic Research &amp; Higher Education</span>
+          </div>
+
+          <h1 class="subpage-title">Education &amp; Biomechanical Science</h1>
+
+          <div class="subpage-highlight">
+            "Investigating human kinetics, advancing biomechanical research, and shaping future healthcare leaders."
+          </div>
+
+          <p class="subpage-text">
+            My teaching journey commenced in 2006 at the College of Physical Education (YMCA Brazil), driven by a dedication to human movement, athletic pedagogy, and sports science.
+          </p>
+
+          <p class="subpage-text">
+            Academically, I attained a Postgraduate Specialization in Biomechanics of Physical Activity and Health, followed by a Master of Science (M.Sc.) degree in Biomechanics at Universidade São Judas Tadeu. In 2020, I earned my second higher education degree in Pedagogy (Licenciatura).
+          </p>
+
+          <p class="subpage-text">
+            As a University Professor, I lectured undergraduate students in Nursing, Physiotherapy, and Physical Education, bridging theoretical biomechanics and systemic anatomy with clinical real-world practice.
+          </p>
+
+          <div class="hero-tags" style="margin-top: 1.5rem;">
+            <span class="hero-tag">M.Sc. Biomechanics</span>
+            <span class="hero-tag">University Professor</span>
+            <span class="hero-tag">Systemic Anatomy &amp; Physiology</span>
+            <span class="hero-tag">Human Kinetics</span>
+            <span class="hero-tag">Pedagogical Systems</span>
+            <span class="hero-tag">Movement Analysis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-copyright">&copy; 2026 Produced by Danilo Luz Jr. • Academic &amp; Movement Sciences</p>
+    </div>
+  </footer>
 </body>
 </html>
