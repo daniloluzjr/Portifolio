@@ -8,7 +8,7 @@ const TIMELINE_DATA = {
     maxYear: 2026.5,
     viewBoxWidth: 1240,
     viewBoxHeight: 560,
-    marginLeft: 140,
+    marginLeft: 175, // Respiro generoso para os títulos ficarem alinhados
     marginRight: 60
   },
   categories: {
@@ -86,7 +86,7 @@ const TIMELINE_DATA = {
       milestoneId: 'hc-aux',
       lines: ['Auxiliary Nurse', 'Certification'],
       year: 2015.8,
-      y: 75, // Nível mais alto para não colidir com Surgical Nurse
+      y: 75,
       hasGuideLine: true,
       guideY1: 95,
       guideY2: 130,
@@ -107,7 +107,7 @@ const TIMELINE_DATA = {
       milestoneId: 'hc-surgical',
       lines: ['Surgical Assistant Nurse'],
       year: 2018.6,
-      y: 110, // Escalonado abaixo de Auxiliary Nurse
+      y: 110,
       category: 'healthcare',
       align: 'middle'
     },
@@ -208,7 +208,7 @@ const TIMELINE_DATA = {
       year: 2005.0,
       y: 380,
       category: 'it',
-      align: 'middle'
+      align: 'start' // Alinhado ao início para se projetar sobre a barra
     },
     {
       id: 'lbl-it-gd-job',

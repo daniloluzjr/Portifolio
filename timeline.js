@@ -76,12 +76,13 @@
     });
     svg += `</g>`;
 
-    // Render Category Labels on the Left
+    // Render Category Labels on the Left - PERFECTLY LEFT-ALIGNED IN A SINGLE COLUMN
     svg += `<g class="chart-categories-labels">`;
+    const labelColumnX = 40; // Posição X idêntica para Healthcare, Education e IT
     Object.values(categories).forEach(cat => {
       svg += `
-        <text x="${marginLeft - 20}" y="${cat.y + 6}" class="cat-label label-${cat.id}" 
-              data-category="${cat.id}" text-anchor="end" fill="${cat.color}">
+        <text x="${labelColumnX}" y="${cat.y + 6}" class="cat-label label-${cat.id}" 
+              data-category="${cat.id}" text-anchor="start" fill="${cat.color}">
           ${cat.label}
         </text>
       `;
@@ -92,7 +93,6 @@
     svg += `<g class="chart-labels-group">`;
     labels.forEach(lbl => {
       const x = getX(lbl.year);
-      const cat = categories[lbl.category];
       const isJob = lbl.isJob;
 
       // Guide line from high label down to track
@@ -145,7 +145,7 @@
            role="button"
            aria-label="${m.title} (${m.period})">
           
-          <!-- Outer circle for hover effect -->
+          <!-- Outer circle for hover effect (No transform, pure stroke & opacity) -->
           <circle cx="${cx}" cy="${cy}" r="14" class="node-aura aura-${m.category}" />
 
           <!-- Main circle perfectly anchored at cx, cy -->
@@ -207,10 +207,8 @@
       const cat = categories[m.category];
 
       const activateMilestone = () => {
-        // Highlight active node
         node.classList.add('node-focused');
 
-        // Highlight associated text in chart
         const svg = container.querySelector('.timeline-svg-clean');
         if (svg) {
           const allTexts = svg.querySelectorAll('.chart-text');
