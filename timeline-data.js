@@ -215,9 +215,9 @@ const TIMELINE_DATA = {
     {
       id: 'lbl-it-ads',
       milestoneId: 'it-ads',
-      lines: ['Technologist in Systems Analysis'],
-      year: 2024.6,
-      y: 380,
+      lines: ['Technologist in', 'Systems Analysis'],
+      year: 2024.2,
+      y: 355,
       category: 'it',
       align: 'middle'
     },
@@ -226,16 +226,16 @@ const TIMELINE_DATA = {
       milestoneId: 'it-apps-2026',
       lines: ['Lux Health System &', 'InisCare Portal Apps'],
       year: 2026.8,
-      y: 380,
+      y: 388,
       category: 'it',
       align: 'middle'
     },
     {
       id: 'lbl-it-dev',
       milestoneId: 'it-apps-2026',
-      lines: ['Web & Mobile Apps (App Store & Google Play)'],
-      year: 2025.7,
-      y: 460,
+      lines: ['Web & Mobile Apps', '(App Store & Google Play)'],
+      year: 2025.6,
+      y: 450,
       isJob: true,
       category: 'it',
       align: 'middle'
@@ -344,7 +344,7 @@ const TIMELINE_DATA = {
     {
       id: 'it-ads',
       category: 'it',
-      year: 2024.6,
+      year: 2024.2,
       title: 'Technologist in Systems Analysis (ADS)',
       period: '2023 – 2025',
       institution: 'Higher ADS College & Alura Dev',
