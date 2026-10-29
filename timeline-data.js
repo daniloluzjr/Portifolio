@@ -216,16 +216,25 @@ const TIMELINE_DATA = {
       id: 'lbl-it-ads',
       milestoneId: 'it-ads',
       lines: ['Technologist in Systems Analysis'],
-      year: 2025.0,
+      year: 2024.6,
+      y: 380,
+      category: 'it',
+      align: 'middle'
+    },
+    {
+      id: 'lbl-it-apps',
+      milestoneId: 'it-apps-2026',
+      lines: ['Lux Health System &', 'InisCare Portal Apps'],
+      year: 2026.8,
       y: 380,
       category: 'it',
       align: 'middle'
     },
     {
       id: 'lbl-it-dev',
-      milestoneId: 'it-ads',
-      lines: ['Web and App Developer'],
-      year: 2025.0,
+      milestoneId: 'it-apps-2026',
+      lines: ['Web & Mobile Apps (App Store & Google Play)'],
+      year: 2025.7,
       y: 460,
       isJob: true,
       category: 'it',
@@ -335,13 +344,24 @@ const TIMELINE_DATA = {
     {
       id: 'it-ads',
       category: 'it',
-      year: 2025.0,
-      title: 'Technologist in Systems Analysis & HealthTech Dev',
-      period: '2023 – 2027+',
-      institution: 'LuxSolutions.tech • Higher ADS College & Alura Dev',
-      role: 'Full-Stack Developer & Founder',
-      detail: 'Graduating as a Technologist in Systems Analysis and actively building digital health web and mobile applications with LuxSolutions.tech through 2026, 2027, and beyond.',
-      skills: 'Web Applications • HTML5 / CSS3 • JavaScript • MySQL • HealthTech UX'
+      year: 2024.6,
+      title: 'Technologist in Systems Analysis (ADS)',
+      period: '2023 – 2025',
+      institution: 'Higher ADS College & Alura Dev',
+      role: 'Systems Analyst & Full-Stack Developer',
+      detail: 'Graduated as a Technologist in Systems Analysis and Development (ADS), mastering modern full-stack architectures, relational database engineering (MySQL/PostgreSQL), algorithms, and web applications.',
+      skills: 'Systems Analysis • Full-Stack Web • MySQL & PostgreSQL • Software Architecture'
+    },
+    {
+      id: 'it-apps-2026',
+      category: 'it',
+      year: 2026.8,
+      title: 'Lux Health System & InisCare Portal Apps (2026)',
+      period: '2026 – Present (2027+)',
+      institution: 'LuxSolutions.tech & InisCare • Dublin, Ireland',
+      role: 'Lead HealthTech Developer & System Architect',
+      detail: 'In 2026, developed the Lux Health System application for streamlined healthcare management. In parallel, engineered the InisCare Portal app (tablet & website) for InisCare, greatly simplifying and accelerating clinical form completion and digital evaluations for healthcare supervisors. Both apps are officially published on the Apple App Store and Google Play.',
+      skills: 'Apple App Store • Google Play • Mobile & Tablet Apps • Clinical Forms Automation • HealthTech UX • Cloud Systems'
     },
     {
       id: 'hc-emt',
