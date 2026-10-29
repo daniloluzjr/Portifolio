@@ -134,16 +134,6 @@ const TIMELINE_DATA = {
       align: 'middle'
     },
     {
-      id: 'lbl-hc-sup',
-      milestoneId: 'hc-emt',
-      lines: ['Healthcare Supervisor'],
-      year: 2025.2,
-      y: 85,
-      isJob: true,
-      category: 'healthcare',
-      align: 'middle'
-    },
-    {
       id: 'lbl-hc-emt',
       milestoneId: 'hc-emt',
       lines: ['Emergency Medical', 'Technician (EMT)'],
@@ -357,12 +347,12 @@ const TIMELINE_DATA = {
       id: 'hc-emt',
       category: 'healthcare',
       year: 2026.0,
-      title: 'Emergency Medical Technician (EMT) & Supervisor',
+      title: 'Emergency Medical Technician (EMT)',
       period: '2024 – 2026',
-      institution: 'Medicall Emergency Training Ireland',
-      role: 'EMT Trainee & Healthcare Supervisor',
-      detail: 'PHECC-certified emergency medical training in pre-hospital trauma, advanced basic life support (CPR/AED), pediatric emergency care, and volunteer ambulance response.',
-      skills: 'Emergency Medical Care • Pre-Hospital Trauma • CPR / AED • Ambulance Operations'
+      institution: 'Medicall Ambulance & Patient Transport Service • Ireland',
+      role: 'Certified Emergency Medical Technician (EMT)',
+      detail: 'Completed professional Emergency Medical Technician (EMT) training with Medicall, Ireland’s dedicated ambulance and patient transport service. Trained in pre-hospital emergency care, patient transport protocols, advanced life support (CPR/AED), medical triage, and patient stabilization.',
+      skills: 'Pre-Hospital Emergency Care • Patient Transport • CPR / AED • Trauma & Medical Stabilization • PHECC Standard'
     }
   ]
 };
