@@ -313,10 +313,13 @@ header.site-header {
 
 /* Graph Canvas Card */
 .timeline-card {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: var(--radius-lg);
   padding: 1.8rem 1.2rem 1.2rem;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
